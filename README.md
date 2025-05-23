@@ -1,3 +1,10 @@
+Set-ExecutionPolicy -Scope CurrentUser Bypass -Force
+Set-ExecutionPolicy -Scope LocalMachine Bypass -Force
+
+& "$PSHOME\powershell.exe" -ExecutionPolicy Bypass -File .\check_authenticode.ps1
+powershell.exe -ExecutionPolicy Bypass -File check_authenticode.ps1
+
+
 1. Core Crypto Building-Blocks
 Component	Algorithm(s)	Purpose
 UEFI PKI chain	RSA-2048/3072 signatures over boot binaries; SHA-256 digest	Verify bootloader & EFI drivers
